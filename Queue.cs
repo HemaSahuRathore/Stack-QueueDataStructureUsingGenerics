@@ -41,6 +41,7 @@ namespace StackNQueueUsingGenerics
             }
             else
             {
+                Console.WriteLine("Elements present in Queue : ");
                 while (tempHead != null)
                 {
                     Console.Write(tempHead.data + " ");
@@ -48,6 +49,19 @@ namespace StackNQueueUsingGenerics
                 }
 
             }
+        }
+
+        //dequeue : remove top element
+        public void Dequeue()
+        {
+            if (head == null)
+                Console.WriteLine("Queue is Empty!!!!");
+            else
+            {
+                Console.WriteLine("\n{0} is removed", head.data);
+                head = head.next;
+            }
+
         }
     }
 }
